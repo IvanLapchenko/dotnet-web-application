@@ -9,11 +9,13 @@ using WebApp.Domain.Entities;
 using WebApp.Domain.Repositories.EntityFramework;
 using WebApp.Domain.Repositories.Abstract;
 using WebApp.Domain;
+using WebApp.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp
 {
@@ -22,7 +24,7 @@ namespace WebApp
         public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration) => Configuration = configuration;
 
-       public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             Configuration.Bind("Project", new Config());
 
@@ -50,9 +52,16 @@ namespace WebApp
                 options.SlidingExpiration = true;
             });
 
-            services.AddControllersWithViews()
-                .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0)
-                .AddSessionStateTempDataProvider();
+            services.AddAuthorization(x =>
+            {
+                x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
+            });
+
+            services.AddControllersWithViews(x =>
+            {
+                x.Conventions.Add(new AdminAreaAuthorization("Admin", "AdminArea"));
+            })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -72,6 +81,7 @@ namespace WebApp
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("admin", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
