@@ -4,7 +4,6 @@
     string strTitle = "Admin panel";
     ViewBag.Title = strTitle;
 }
-
 @using WebApp.Domain.Entities
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model IQueryable<ServiceItem>
@@ -15,7 +14,7 @@
     <div>
         <h3>Our services</h3>
         <div class="div-box">
-            <a asp-area="Admin" asp-controller="ServiceItem" asp-action="Edit" asp-route-id="">Add service</a>
+            <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="">Add service</a>
         </div>
         @if (Model.Any())
         {
@@ -23,11 +22,11 @@
                 @foreach (ServiceItem entity in Model)
                 {
                     <div>
-                        <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route="entity.Id">Edit</a>
+                        <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="@entity.Id">Edit</a>
                         |
                         <form style="display: inline-block;" id="form-@entity.Id" asp-area="Admin" asp-controller="ServiceItems" asp-action="Delete" method="post">
-                              <input type="hidden" name="id" value="@entity.Id">
-                              <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">Delete</a>  
+                            <input type="hidden" name="id" value="@entity.Id">
+                            <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">Delete</a>
                         </form>
                         |
                         <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">

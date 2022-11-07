@@ -12,7 +12,7 @@ namespace WebApp.Domain.Entities
         [Display(Name = "Name of service")]
         public override string Title { get; set; }
 
-        [Display(Name = "Showt name of service")]
+        [Display(Name = "Short name of service")]
         public override string Subtitle { get; set; }
 
         [Display(Name = "Full description of service")]
