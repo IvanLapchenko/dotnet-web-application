@@ -1,10 +1,54 @@
 ﻿@import url(../sass/fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
-/*
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
+div.checkbox-rect2 input[type="checkbox"] {
+
+    display: block;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 14px/20px "Open Sans", Arial, sans-serif;
+    cursor: pointer;
+
+    content: "Remember me";
+    display: block;
+    width: 1.4em;
+    height: 1.4em;
+    border: 1px solid #343a3f;
+    border-radius: 0.2em;
+    left: 0;
+    top: 0;
+    -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+    transition: all 0.2s, background 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: -2px -1px 0 #343a3f;
+    background: #f3f3f3;
+}
+
+
+div.checkbox-rect2 input[type="checkbox"]:hover + label:hover {
+        color: rgb(23, 86, 228);
+        border: 1px solid #343a3f;
+        box-shadow: 2px 1px 0 #343a3f;
+    }
+
+div.checkbox-rect2 input[type="checkbox"] + label:last-child {
+    margin-bottom: 0;
+}
+
+div.checkbox-rect2 input[type="checkbox"]:checked + label:before {
+    border: 2px solid #fff;
+    border-radius: 0.3em;
+    background: #50565a;
+    box-shadow: 2px 1px 0 #50565a;
+}
+
+.div-box{
+    display: block;
+}
+
+
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -16,12 +60,13 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -54,13 +99,7 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-input, select, textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none; }
-
-/* Basic */
+ Basic 
 @-ms-viewport {
   width: device-width; }
 
@@ -80,9 +119,12 @@ html {
 body {
   background-color: #2e3141;
   background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-  background-size: auto, cover;
-  background-attachment: fixed, fixed;
-  background-position: center, center; }
+  background-size: auto,
+ cover;
+  background-attachment: fixed,
+ fixed;
+  background-position: center,
+ center; }
   body.is-preload *, body.is-preload *:before, body.is-preload *:after {
     -moz-animation: none !important;
     -webkit-animation: none !important;
@@ -122,6 +164,7 @@ a {
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+  display: block;
   color: #ffffff;
   text-decoration: none; }
   a:hover {
@@ -1276,14 +1319,12 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-appearance: none;
+/*  -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
-  appearance: none;
+  appearance: none;*/
   display: block;
-  float: left;
   margin-right: -2em;
-  opacity: 0;
   width: 1em;
   z-index: -1; }
   input[type="checkbox"] + label,
@@ -2161,8 +2202,10 @@ body.is-menu-visible #menu {
       padding: 7em 0 8.25em 0 ;
       background-color: #2e3141;
       background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-      background-size: auto, cover;
-      background-position: center, center;
+      background-size: auto,
+ cover;
+      background-position: center,
+ center;
       margin-bottom: -6.5em; } }
   @media screen and (max-width: 980px) {
     #banner {
@@ -2233,15 +2276,19 @@ body.is-menu-visible #menu {
     padding: 9em 0 6.25em 0 ;
     background-color: #2e3141;
     background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-    background-size: auto, cover;
-    background-position: center, 0% 30%;
+    background-size: auto,
+ cover;
+    background-position: center,
+ 0% 30%;
     margin-bottom: -6.5em; } }
 
 @media screen and (max-width: 980px) {
   #wrapper > header {
     padding: 11em 3em 7.375em 3em ;
-    background-size: auto, cover;
-    background-position: center, 0% 0%;
+    background-size: auto,
+ cover;
+    background-position: center,
+ 0% 0%;
     margin-bottom: -4.75em; }
     #wrapper > header .inner {
       width: 100%; } }
@@ -2249,7 +2296,8 @@ body.is-menu-visible #menu {
 @media screen and (max-width: 736px) {
   #wrapper > header {
     padding: 6.5em 2em 3em 2em ;
-    background-size: auto, 125%;
+    background-size: auto,
+ 125%;
     margin-bottom: -2.5em; }
     #wrapper > header h2 {
       font-size: 1.25em; }
@@ -2520,8 +2568,10 @@ body.is-menu-visible #menu {
   #footer {
     background-color: #2e3141;
     background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-    background-size: auto, cover;
-    background-position: center, center;
+    background-size: auto,
+ cover;
+    background-position: center,
+ center;
     margin-top: -6.5em;
     padding-top: 6.5em; } }
 

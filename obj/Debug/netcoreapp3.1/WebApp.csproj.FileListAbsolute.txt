@@ -160,3 +160,9 @@ C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\WebApp.genruntimeconfi
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\bin\Debug\netcoreapp3.1\appsettings.staging.json
 C:\Users\Ivan\source\repos\WebApp\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\staticwebassets\WebApp.StaticWebAssets.xml
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebApp.styles.css
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewStart.cshtml.g.cs
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\TextFields\Edit.cshtml.g.cs

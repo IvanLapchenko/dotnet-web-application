@@ -79,23 +79,23 @@
 		text-transform: uppercase;
 	}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="tel"],
-	select,
-	textarea {
-		@include vendor('appearance', 'none');
-		background: _palette(border-bg);
-		border-radius: _size(border-radius);
-		border: none;
-		border: solid 2px _palette(border);
-		color: inherit;
-		display: block;
-		outline: 0;
-		padding: 0 1em;
-		text-decoration: none;
-		width: 100%;
+	/*	input[type="text"],
+		input[type="password"],
+		input[type="email"],
+		input[type="tel"],
+		select,
+		textarea {
+			@include vendor('appearance', 'none');
+			background: _palette(border-bg);
+			border-radius: _size(border-radius);
+			border: none;
+			border: solid 2px _palette(border);
+			color: inherit;
+			display: block;
+			outline: 0;
+			padding: 0 1em;
+			text-decoration: none;
+			width: 100%;*/
 
 		&:invalid {
 			box-shadow: none;
