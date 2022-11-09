@@ -170,3 +170,4 @@ C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\View
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contacts.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Services\Index.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Services\Show.cshtml.g.cs
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Web\Default.cshtml.g.cs
