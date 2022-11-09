@@ -1,6 +1,10 @@
-﻿<header id="header" class="alt">
-    <h1><a href="index.html"></a></h1>
+﻿@using WebApp.Service;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<header id="header" class="alt">
+    <h1><a href="index.html"></a>@Config.CompanyName</h1>
     <nav>
-        <a href="#menu">Menu</a>
+        <a asp-area="" asp-controller="Home" asp-action="Index">Main</a>
+        <a asp-area="" asp-controller="Home" asp-action="Contacts">Contacts</a>
+        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="">Services</a>
     </nav>
 </header>

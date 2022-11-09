@@ -1,14 +1,15 @@
-﻿@{
+﻿@using WebApp.Domain.Entities
+@model TextField
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
     ViewBag.Title = Model.MetaTitle;
     ViewBag.Description = Model.MetaDescription;
     ViewBag.Keywords = Model.MetaKeywords;
 }
-@using WebApp.Domain.Entities
-@model TextField
+
 
 <div>
-    @Html.Raw(Model.Text) 
+    @Html.Raw(Model.Text)
 </div>
 
