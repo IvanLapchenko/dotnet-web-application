@@ -21,5 +21,10 @@ namespace TheASPPractice.Controllers
         {
             return View(dataManager.TextFields.GetTextFieldByCodeWord("PageContacts"));
         }
+
+        public IActionResult News()
+        {
+            return View(dataManager.TextFields.GetTextFieldByCodeWord("PageNews"));
+        }
     }
 }

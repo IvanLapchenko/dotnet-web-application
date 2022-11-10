@@ -143,13 +143,10 @@ C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Ban
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\CssPartial.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\FooterPartial.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\HeaderPartial.cshtml.g.cs
-C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Layout.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\MenuPartial.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\MetaTagsPartial.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\ScriptsPartial.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\WrapperPartial.cshtml.g.cs
-C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\VievStart.cshtml.g.cs
-C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ViewImport.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\WebApp.RazorTargetAssemblyInfo.cache
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\WebApp.RazorTargetAssemblyInfo.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\WebApp.Views.pdb
@@ -160,8 +157,6 @@ C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\WebApp.genruntimeconfi
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\bin\Debug\netcoreapp3.1\appsettings.staging.json
 C:\Users\Ivan\source\repos\WebApp\bin\Debug\netcoreapp3.1\Humanizer.dll
-C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\staticwebassets\WebApp.StaticWebAssets.xml
-C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebApp.styles.css
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ViewStart.cshtml.g.cs
@@ -171,3 +166,9 @@ C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Conta
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Services\Index.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Services\Show.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Web\Default.cshtml.g.cs
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\staticwebassets\WebApp.StaticWebAssets.xml
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebApp.styles.css
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\News.cshtml.g.cs

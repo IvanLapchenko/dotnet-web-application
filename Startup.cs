@@ -10,10 +10,6 @@ using WebApp.Domain.Repositories.EntityFramework;
 using WebApp.Domain.Repositories.Abstract;
 using WebApp.Domain;
 using WebApp.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 

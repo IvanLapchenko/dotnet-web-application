@@ -65,6 +65,13 @@ namespace WebApp.Domain
                 CodeWord = "PageContacts",
                 Title = "Our Contacts"
             });
+
+            builder.Entity<TextField>().HasData(new TextField
+            {
+                Id = new Guid("B4A827B2-189E-4A1A-B033-936607096BA2"),
+                CodeWord = "PageNews",
+                Title = "Our News"
+            });
         }
     }
 }
