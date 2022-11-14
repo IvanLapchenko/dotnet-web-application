@@ -49,7 +49,7 @@ namespace WebApp.Migrations
                         new
                         {
                             Id = "D4D5ECAB-327F-48BD-9644-27C4EF9095D0",
-                            ConcurrencyStamp = "a3cd0d9c-1aab-4635-bab6-82e8078057e6",
+                            ConcurrencyStamp = "8dacdb9f-444e-4709-826d-02e15766e806",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -148,13 +148,13 @@ namespace WebApp.Migrations
                         {
                             Id = "25DC686E-5D5C-45E5-AF8C-64E10600055B",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c90aace6-c501-4a72-9add-50b4a4ee9337",
+                            ConcurrencyStamp = "308a2ef9-70c0-416d-b2ac-70bb6bc757f8",
                             Email = "admin@mail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHtq4iEyzE/jXG/U1/IN2I767zMCRt1z7O2gBLRYLv+/58TfTQM7CLX8YY372w9vyw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEFQ45U8doXGGDqOlKY7evVUdCJf3RC1TXkqzRz4ceajSBqEEjjRYOhOYlGLNRwYD/Q==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -249,6 +249,42 @@ namespace WebApp.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("WebApp.Domain.Entities.NewsItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MetaDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaKeywords")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subtitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TitleImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NewsItems");
+                });
+
             modelBuilder.Entity("WebApp.Domain.Entities.ServiceItem", b =>
                 {
                     b.Property<Guid>("Id")
@@ -328,7 +364,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("30a389fc-f1e4-4b5d-819a-70d1e50afe92"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2022, 11, 3, 22, 16, 39, 172, DateTimeKind.Utc).AddTicks(1212),
+                            DateAdded = new DateTime(2022, 11, 10, 21, 21, 8, 526, DateTimeKind.Utc).AddTicks(2373),
                             Text = "Content is filling by administrator",
                             Title = "Main"
                         },
@@ -336,7 +372,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("728727b7-fd56-4d30-b8f8-9dc71e699f8a"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2022, 11, 3, 22, 16, 39, 172, DateTimeKind.Utc).AddTicks(3376),
+                            DateAdded = new DateTime(2022, 11, 10, 21, 21, 8, 526, DateTimeKind.Utc).AddTicks(4858),
                             Text = "Content is filling by administrator",
                             Title = "Our Services"
                         },
@@ -344,9 +380,17 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("210edbb6-7bb7-4314-a13c-be92809fe020"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2022, 11, 3, 22, 16, 39, 172, DateTimeKind.Utc).AddTicks(3455),
+                            DateAdded = new DateTime(2022, 11, 10, 21, 21, 8, 526, DateTimeKind.Utc).AddTicks(4960),
                             Text = "Content is filling by administrator",
                             Title = "Our Contacts"
+                        },
+                        new
+                        {
+                            Id = new Guid("b4a827b2-189e-4a1a-b033-936607096ba2"),
+                            CodeWord = "PageNews",
+                            DateAdded = new DateTime(2022, 11, 10, 21, 21, 8, 526, DateTimeKind.Utc).AddTicks(5002),
+                            Text = "Content is filling by administrator",
+                            Title = "Our News"
                         });
                 });
 

@@ -1,11 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WebApp.Domain.Entities;
 using WebApp.Domain.Repositories.EntityFramework;
 using WebApp.Domain.Repositories.Abstract;
 using WebApp.Domain;
@@ -26,6 +24,7 @@ namespace WebApp
 
             services.AddTransient<ITextFieldsRepostory, EFTextFieldsRepostory>();
             services.AddTransient<IServiceItemsRepository, EFServiceItemsRepository>();
+            services.AddTransient<INewsItemsRepository, EFNewsItemRepository>();
             services.AddTransient<DataManager>();
 
             services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));

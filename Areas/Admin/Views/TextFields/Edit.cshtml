@@ -1,10 +1,10 @@
 ﻿@model TextField
 @{
-    string strTitle = "Edit text";
+    string strTitle = "Edit contacts";
     ViewBag.Title = strTitle;
 }
 
-<script src="~/js/ckeditor.js"></script>
+<script src="~/js/ckeditor/ckeditor.js"></script>
 
 <div>
     <h2>@strTitle</h2>
@@ -12,13 +12,18 @@
         <form asp-area="Admin" asp-controller="TextFields" asp-action="Edit" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="DateAdded" />
-            <input type="hidden" asp-for="CodeWord" />
+            <input type="hidden" asp-for="TitleImagePath" />
 
             <div asp-validation-summary="All"></div>
             <div class="div-box">
                 <label asp-for="Title"></label>
                 <input asp-for="Title" />
                 <span asp-validation-for="Title"></span>
+            </div>
+            <div class="div-box">
+                <label asp-for="Subtitle"></label>
+                <input asp-for="Subtitle" />
+                <span asp-validation-for="Subtitle"></span>
             </div>
             <div class="div-box">
                 <label asp-for="Text"></label>
@@ -44,6 +49,7 @@
         </form>
     </div>
 </div>
+
 
 
 <script>

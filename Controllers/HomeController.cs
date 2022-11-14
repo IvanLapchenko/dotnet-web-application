@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApp.Domain;
 
-namespace TheASPPractice.Controllers
+namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
@@ -20,11 +20,6 @@ namespace TheASPPractice.Controllers
         public IActionResult Contacts()
         {
             return View(dataManager.TextFields.GetTextFieldByCodeWord("PageContacts"));
-        }
-
-        public IActionResult News()
-        {
-            return View(dataManager.TextFields.GetTextFieldByCodeWord("PageNews"));
         }
     }
 }

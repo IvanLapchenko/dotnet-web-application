@@ -10,7 +10,7 @@ namespace WebApp.Areas.Admin.Controllers
     public class TextFieldsController : Controller
     {
         public readonly DataManager dataManager;
-        public TextFieldsController(DataManager dataManager)
+        public TextFieldsController (DataManager dataManager)
         {
             this.dataManager = dataManager;
         }

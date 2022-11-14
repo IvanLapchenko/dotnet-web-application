@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebApp.Domain.Entities
@@ -26,15 +23,15 @@ namespace WebApp.Domain.Entities
         public virtual string TitleImagePath { get; set; }
 
         [Display(Name = "SEO Metatag Title")]
-        public virtual string MetaTitle { get; set; }
+        public string MetaTitle { get; set; }
 
         [Display(Name = "SEO Metatag Description")]
-        public virtual string MetaDescription { get; set; }
+        public string MetaDescription { get; set; }
 
         [Display(Name = "SEO Metatag Keywords")]
-        public virtual string MetaKeywords { get; set; }   
+        public string MetaKeywords { get; set; }   
 
-        [DataType (DataType.Time)]
+        [DataType(DataType.Time)]
         public DateTime DateAdded { get; set; }
     }
 }

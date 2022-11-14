@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using WebApp.Domain.Repositories.Abstract;
+﻿using WebApp.Domain.Repositories.Abstract;
 
 namespace WebApp.Domain
 {
@@ -10,11 +6,13 @@ namespace WebApp.Domain
     {
         public ITextFieldsRepostory TextFields { get; set; }
         public IServiceItemsRepository ServiceItems { get; set; }
+        public INewsItemsRepository NewsItems { get; set; }
 
-        public DataManager(ITextFieldsRepostory textFieldsRepostory, IServiceItemsRepository serviceItemsRepository)
+        public DataManager(ITextFieldsRepostory textFieldsRepostory, IServiceItemsRepository serviceItemsRepository, INewsItemsRepository newsItemsRepository)
         {
             TextFields = textFieldsRepostory;
             ServiceItems = serviceItemsRepository;
+            NewsItems = newsItemsRepository;
         }
     }
 }

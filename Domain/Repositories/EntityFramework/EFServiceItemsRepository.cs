@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using WebApp.Domain.Repositories.Abstract;
 using WebApp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;

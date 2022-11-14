@@ -5,9 +5,6 @@ using WebApp.Domain;
 using WebApp.Domain.Entities;
 using WebApp.Service;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace WebApp.Areas.Admin.Controllers

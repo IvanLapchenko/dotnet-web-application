@@ -3,9 +3,6 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Domain.Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebApp.Domain
 {
@@ -15,6 +12,7 @@ namespace WebApp.Domain
 
         public DbSet<TextField> TextFields { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
+        public DbSet<NewsItem> NewsItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
