@@ -13,6 +13,7 @@ namespace WebApp.Domain
         public DbSet<TextField> TextFields { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
         public DbSet<NewsItem> NewsItems { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -69,6 +70,13 @@ namespace WebApp.Domain
                 Id = new Guid("B4A827B2-189E-4A1A-B033-936607096BA2"),
                 CodeWord = "PageNews",
                 Title = "Our News"
+            });
+
+            builder.Entity<Message>().HasData(new Message
+            {
+                Id = new Guid("AFBAC4C6-864C-48ED-984D-F9B23F2B6869"),
+                CodeWord = "Messages",
+                Title = "Messages"
             });
         }
     }
