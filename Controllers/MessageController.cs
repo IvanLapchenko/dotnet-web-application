@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Hosting;
 using WebApp.Domain;
 using WebApp.Domain.Entities;
 using WebApp.Service;
+using System;
 
 namespace WebApp.Controllers
 {
@@ -14,12 +14,14 @@ namespace WebApp.Controllers
             this.dataManager = dataManager;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(Guid id)
         {
-            return View(dataManager.TextFields.GetTextFieldByCodeWord("Message"));
+            var entity = id == default ? new Message() : dataManager.Message.GetMessageById(id);
+            return View(entity);
         }
+
         [HttpPost]
-        public IActionResult Index(Message model)
+        public IActionResult Edit(Message model)
         {
             if (ModelState.IsValid)
             {

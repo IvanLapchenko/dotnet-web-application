@@ -75,7 +75,7 @@ namespace WebApp.Domain
             builder.Entity<Message>().HasData(new Message
             {
                 Id = new Guid("AFBAC4C6-864C-48ED-984D-F9B23F2B6869"),
-                CodeWord = "Messages",
+                CodeWord = "Message",
                 Title = "Messages"
             });
         }
