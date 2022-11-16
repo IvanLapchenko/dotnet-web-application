@@ -1,0 +1,18 @@
+﻿@model IQueryable<Message>
+
+<div>
+    @if (Model.Any())
+    {
+        <h1>Messages</h1>
+        <ul class="big-image-list">
+            @foreach (Message entity in Model)
+            {
+                <li>
+                    <a asp-area="admin" asp-controller="Message" asp-action="Index" asp-route-id="@entity.Id"></a>
+
+                    <p>@entity.Text</p>
+                </li>
+            }
+        </ul>
+    }
+</div>
