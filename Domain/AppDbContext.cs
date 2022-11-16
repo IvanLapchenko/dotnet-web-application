@@ -14,6 +14,7 @@ namespace WebApp.Domain
         public DbSet<ServiceItem> ServiceItems { get; set; }
         public DbSet<NewsItem> NewsItems { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Suggested> Suggested { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -75,6 +76,13 @@ namespace WebApp.Domain
             builder.Entity<Message>().HasData(new Message
             {
                 Id = new Guid("AFBAC4C6-864C-48ED-984D-F9B23F2B6869"),
+                CodeWord = "Message",
+                Title = "Messages"
+            });
+
+            builder.Entity<Suggested>().HasData(new Suggested
+            {
+                Id = new Guid("AFBAC4C6-864C-48ED-984D-F9B23F2B6669"),
                 CodeWord = "Message",
                 Title = "Messages"
             });
