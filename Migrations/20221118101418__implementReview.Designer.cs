@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApp.Domain;
 
 namespace WebApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221118101418__implementReview")]
+    partial class _implementReview
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,7 +51,7 @@ namespace WebApp.Migrations
                         new
                         {
                             Id = "D4D5ECAB-327F-48BD-9644-27C4EF9095D0",
-                            ConcurrencyStamp = "ca767a7f-30ec-4ad4-82a8-477638055c82",
+                            ConcurrencyStamp = "159a09a8-3c69-440c-a017-f93d9067f1be",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -148,13 +150,13 @@ namespace WebApp.Migrations
                         {
                             Id = "25DC686E-5D5C-45E5-AF8C-64E10600055B",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1803d69a-565f-4251-a6a9-050cd8b276d3",
+                            ConcurrencyStamp = "899546c8-e52d-4301-9fbe-de2d99e9521c",
                             Email = "admin@mail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAENHYkWFtUiuovvc7TVMMKfOjHis2+4lsftkmlAVS0fAxlJdYqAhGuauiN6UPh+XQgg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIoueGAIGgMXma4cCrabM9cacwkeuGplWSoVlAZEUxARUqsaO0VQfcLCtLIWb27qig==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -299,9 +301,6 @@ namespace WebApp.Migrations
                     b.Property<bool>("IsApproved")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsRejected")
-                        .HasColumnType("bit");
-
                     b.Property<string>("MetaDescription")
                         .HasColumnType("nvarchar(max)");
 
@@ -336,9 +335,8 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("b4a827b2-189e-4a1a-b033-936607096ba2"),
                             CodeWord = "PageNews",
-                            DateAdded = new DateTime(2022, 11, 18, 10, 26, 2, 532, DateTimeKind.Utc).AddTicks(6034),
+                            DateAdded = new DateTime(2022, 11, 18, 10, 14, 17, 146, DateTimeKind.Utc).AddTicks(45),
                             IsApproved = false,
-                            IsRejected = false,
                             Title = "Our News"
                         });
                 });
@@ -422,7 +420,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("30a389fc-f1e4-4b5d-819a-70d1e50afe92"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2022, 11, 18, 10, 26, 2, 532, DateTimeKind.Utc).AddTicks(2823),
+                            DateAdded = new DateTime(2022, 11, 18, 10, 14, 17, 145, DateTimeKind.Utc).AddTicks(7299),
                             Text = "Content is filling by administrator",
                             Title = "Main"
                         },
@@ -430,7 +428,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("728727b7-fd56-4d30-b8f8-9dc71e699f8a"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2022, 11, 18, 10, 26, 2, 532, DateTimeKind.Utc).AddTicks(5303),
+                            DateAdded = new DateTime(2022, 11, 18, 10, 14, 17, 145, DateTimeKind.Utc).AddTicks(9403),
                             Text = "Content is filling by administrator",
                             Title = "Our Services"
                         },
@@ -438,7 +436,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("210edbb6-7bb7-4314-a13c-be92809fe020"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2022, 11, 18, 10, 26, 2, 532, DateTimeKind.Utc).AddTicks(5398),
+                            DateAdded = new DateTime(2022, 11, 18, 10, 14, 17, 145, DateTimeKind.Utc).AddTicks(9488),
                             Text = "Content is filling by administrator",
                             Title = "Our Contacts"
                         });

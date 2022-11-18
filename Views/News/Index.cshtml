@@ -1,25 +1,30 @@
 ﻿@model IQueryable<NewsItem>
 @{
-    TextField textField = ViewBag.TextField;
-    ViewBag.Title = textField.MetaTitle;
-    ViewBag.Description = textField.MetaDescription;
-    ViewBag.Keywords = textField.MetaKeywords;
+    NewsItem textField = ViewBag.NewsItem;
+    //ViewBag.Title = textField.MetaTitle;
+    //ViewBag.Description = textField.MetaDescription;
+    //ViewBag.Keywords = textField.MetaKeywords;
 }
 
 <div>
-    @if (Model.Any())
+    <h1>Our news</h1>
+    @if (Model.Any() ) 
     {
-        <ul class="big-image-list">
-            @foreach (NewsItem entity in Model)
+    <ul class="big-image-list">
+        @foreach (NewsItem entity in Model)
+        {
+            if (entity.IsApproved == true)
             {
                 <li>
                     <a asp-area="" asp-controller="News" asp-action="Index" asp-route-id="@entity.Id">
                         <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
                     </a>
                     <h4>@entity.Title</h4>
-                    <p>@entity.Subtitle</p>
+                    <p>@entity.Text</p>
                 </li>
             }
-        </ul>
+
+        }
+    </ul>
     }
 </div>

@@ -1,0 +1,26 @@
+﻿@model IQueryable<NewsItem>
+
+<div>
+    @if (Model.Any())
+    {
+    <ul class="big-image-list">
+
+        @foreach (NewsItem entity in Model)
+        {
+            if (entity.IsApproved == false)
+            {
+                <li>
+                    <h2>@entity.Title</h2>
+                    <p>@entity.Text</p>
+                    <a asp-area="Admin" asp-controller="Suggested" asp-action="Reject" asp-route-id="@entity.Id">Reject</a>
+                    <a asp-area="Admin" asp-controller="Suggested" asp-action="Approve" asp-route-id="@entity.Id">Approve</a>
+                </li>
+            }
+
+        }
+    </ul>
+
+
+    }
+    
+</div>

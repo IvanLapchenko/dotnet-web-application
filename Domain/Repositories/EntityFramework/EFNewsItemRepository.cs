@@ -17,7 +17,7 @@ namespace WebApp.Domain.Repositories.EntityFramework
 
         public IQueryable<NewsItem> GetNewsItems()
         {
-            return context.NewsItems;
+                return context.NewsItems;
         }
 
         public NewsItem GetNewsItemById(Guid id)

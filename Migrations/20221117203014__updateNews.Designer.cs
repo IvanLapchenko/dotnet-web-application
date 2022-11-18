@@ -10,8 +10,8 @@ using WebApp.Domain;
 namespace WebApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221116104635__addSuggested")]
-    partial class _addSuggested
+    [Migration("20221117203014__updateNews")]
+    partial class _updateNews
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -51,7 +51,7 @@ namespace WebApp.Migrations
                         new
                         {
                             Id = "D4D5ECAB-327F-48BD-9644-27C4EF9095D0",
-                            ConcurrencyStamp = "d6aea8ec-7589-4e0d-9750-671f24062189",
+                            ConcurrencyStamp = "7f4c2463-5b82-4dae-8ef3-571711a7633b",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -150,13 +150,13 @@ namespace WebApp.Migrations
                         {
                             Id = "25DC686E-5D5C-45E5-AF8C-64E10600055B",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ea5a9f10-5327-4ecc-bc18-939005a5cc3a",
+                            ConcurrencyStamp = "7ed57424-0114-49e6-a850-f1689e0a59ab",
                             Email = "admin@mail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEK+azbVsQZwBHqNxDuBLAeKlMZgF+2sn9t8ilk4hCE+gdOaVxANwRcq/ekQwynQhdw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE+DNvwswInpnhG6MaFM3BuZikCOsYMTcJR1ERcoGprsIMgVCIAUuoE6xB9yMjP4MA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -289,12 +289,17 @@ namespace WebApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CodeWord")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("DateAdded")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
 
                     b.Property<string>("MetaDescription")
                         .HasColumnType("nvarchar(max)");
@@ -322,7 +327,15 @@ namespace WebApp.Migrations
 
                     b.ToTable("NewsItems");
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("NewsItem");
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b4a827b2-189e-4a1a-b033-936607096ba2"),
+                            CodeWord = "PageNews",
+                            DateAdded = new DateTime(2022, 11, 17, 20, 30, 13, 671, DateTimeKind.Utc).AddTicks(3962),
+                            IsApproved = false,
+                            Title = "Our News"
+                        });
                 });
 
             modelBuilder.Entity("WebApp.Domain.Entities.ServiceItem", b =>
@@ -404,7 +417,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("30a389fc-f1e4-4b5d-819a-70d1e50afe92"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2022, 11, 16, 10, 46, 34, 190, DateTimeKind.Utc).AddTicks(7450),
+                            DateAdded = new DateTime(2022, 11, 17, 20, 30, 13, 671, DateTimeKind.Utc).AddTicks(1120),
                             Text = "Content is filling by administrator",
                             Title = "Main"
                         },
@@ -412,7 +425,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("728727b7-fd56-4d30-b8f8-9dc71e699f8a"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2022, 11, 16, 10, 46, 34, 190, DateTimeKind.Utc).AddTicks(9818),
+                            DateAdded = new DateTime(2022, 11, 17, 20, 30, 13, 671, DateTimeKind.Utc).AddTicks(3302),
                             Text = "Content is filling by administrator",
                             Title = "Our Services"
                         },
@@ -420,39 +433,9 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("210edbb6-7bb7-4314-a13c-be92809fe020"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2022, 11, 16, 10, 46, 34, 190, DateTimeKind.Utc).AddTicks(9911),
+                            DateAdded = new DateTime(2022, 11, 17, 20, 30, 13, 671, DateTimeKind.Utc).AddTicks(3395),
                             Text = "Content is filling by administrator",
                             Title = "Our Contacts"
-                        },
-                        new
-                        {
-                            Id = new Guid("b4a827b2-189e-4a1a-b033-936607096ba2"),
-                            CodeWord = "PageNews",
-                            DateAdded = new DateTime(2022, 11, 16, 10, 46, 34, 190, DateTimeKind.Utc).AddTicks(9949),
-                            Text = "Content is filling by administrator",
-                            Title = "Our News"
-                        });
-                });
-
-            modelBuilder.Entity("WebApp.Domain.Entities.Suggested", b =>
-                {
-                    b.HasBaseType("WebApp.Domain.Entities.NewsItem");
-
-                    b.Property<string>("CodeWord")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("Suggested");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("afbac4c6-864c-48ed-984d-f9b23f2b6669"),
-                            DateAdded = new DateTime(2022, 11, 16, 10, 46, 34, 191, DateTimeKind.Utc).AddTicks(3403),
-                            Title = "Messages",
-                            CodeWord = "Message"
                         });
                 });
 

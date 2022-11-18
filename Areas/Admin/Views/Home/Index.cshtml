@@ -9,14 +9,15 @@
     <h1>@strTitle</h1>
     
 </div>
-    <div class="div-box">
-        <h3>Edit pages</h3>
-        <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeword="PageIndex">Main</a>
-        <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-codeword="PageServices">Services</a>
-        <a asp-area="Admin" asp-controller="TextFields" asp-action="EditContacts" asp-route-codeword="PageConacts">Contacts</a>
-        <a asp-area="Admin" asp-controller="NewsItems" asp-action="Index" asp-route-codeword="PageNews">News</a>
-        <a asp-area="Admin" asp-controller="Message" asp-action="Index" asp-route-codeword="Message">Messages</a>
-    </div>
+<div class="div-box">
+    <h3>Edit pages</h3>
+    <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeword="PageIndex">Main</a>
+    <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-codeword="PageServices">Services</a>
+    <a asp-area="Admin" asp-controller="TextFields" asp-action="EditContacts" asp-route-codeword="PageConacts">Contacts</a>
+    <a asp-area="Admin" asp-controller="NewsItems" asp-action="Index" asp-route-codeword="PageNews">News</a>
+    <a asp-area="Admin" asp-controller="Message" asp-action="Index" asp-route-codeword="Message">Messages</a>
+    <a asp-area="Admin" asp-controller="Suggested" asp-action="Index" asp-route-codeword="Message">Suggest news</a>
+</div>
     <div class="div-box">
         <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
             <input type="submit" value="Log out" />
