@@ -49,7 +49,7 @@ namespace WebApp.Migrations
                         new
                         {
                             Id = "D4D5ECAB-327F-48BD-9644-27C4EF9095D0",
-                            ConcurrencyStamp = "ca767a7f-30ec-4ad4-82a8-477638055c82",
+                            ConcurrencyStamp = "c0c320e6-a6a9-4ed1-b1c0-37160b7f2779",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -148,13 +148,13 @@ namespace WebApp.Migrations
                         {
                             Id = "25DC686E-5D5C-45E5-AF8C-64E10600055B",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1803d69a-565f-4251-a6a9-050cd8b276d3",
+                            ConcurrencyStamp = "c4f0c508-05b3-4d68-b8f2-89916719f831",
                             Email = "admin@mail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAENHYkWFtUiuovvc7TVMMKfOjHis2+4lsftkmlAVS0fAxlJdYqAhGuauiN6UPh+XQgg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEALIG2rOVE1pnu8UN6AOH4lhTGFH9fvngodcd1sswEW1p+a+wg3K4OfNbmFlcvC7OA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -322,12 +322,15 @@ namespace WebApp.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("TitleImagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Title")
+                        .IsUnique();
 
                     b.ToTable("NewsItems");
 
@@ -336,7 +339,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("b4a827b2-189e-4a1a-b033-936607096ba2"),
                             CodeWord = "PageNews",
-                            DateAdded = new DateTime(2022, 11, 18, 10, 26, 2, 532, DateTimeKind.Utc).AddTicks(6034),
+                            DateAdded = new DateTime(2022, 11, 21, 8, 48, 20, 229, DateTimeKind.Utc).AddTicks(6407),
                             IsApproved = false,
                             IsRejected = false,
                             Title = "Our News"
@@ -422,7 +425,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("30a389fc-f1e4-4b5d-819a-70d1e50afe92"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2022, 11, 18, 10, 26, 2, 532, DateTimeKind.Utc).AddTicks(2823),
+                            DateAdded = new DateTime(2022, 11, 21, 8, 48, 20, 229, DateTimeKind.Utc).AddTicks(3106),
                             Text = "Content is filling by administrator",
                             Title = "Main"
                         },
@@ -430,7 +433,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("728727b7-fd56-4d30-b8f8-9dc71e699f8a"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2022, 11, 18, 10, 26, 2, 532, DateTimeKind.Utc).AddTicks(5303),
+                            DateAdded = new DateTime(2022, 11, 21, 8, 48, 20, 229, DateTimeKind.Utc).AddTicks(5653),
                             Text = "Content is filling by administrator",
                             Title = "Our Services"
                         },
@@ -438,7 +441,7 @@ namespace WebApp.Migrations
                         {
                             Id = new Guid("210edbb6-7bb7-4314-a13c-be92809fe020"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2022, 11, 18, 10, 26, 2, 532, DateTimeKind.Utc).AddTicks(5398),
+                            DateAdded = new DateTime(2022, 11, 21, 8, 48, 20, 229, DateTimeKind.Utc).AddTicks(5749),
                             Text = "Content is filling by administrator",
                             Title = "Our Contacts"
                         });

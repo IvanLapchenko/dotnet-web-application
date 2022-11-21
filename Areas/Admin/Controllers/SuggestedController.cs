@@ -30,11 +30,7 @@ namespace WebApp.Areas.Admin.Controllers
 
         public IActionResult Approve(Guid id)
         {
-            //var entity = context.NewsItems.FirstOrDefaultAsync(item => item.Id == id);
-            //var ent = context.NewsItems.Find(id);
-            //var e = context.NewsItems.FirstAsync(a => a.Id == id);
             var ent = dataManager.NewsItems.GetNewsItemById(id);
-            //context.NewsItems.Update(ent);
             ent.IsApproved = true;
             context.SaveChanges();
             return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
@@ -42,9 +38,9 @@ namespace WebApp.Areas.Admin.Controllers
 
         public IActionResult Reject(Guid id)
         {
-            //dataManager.NewsItems.DeleteNewsItem(id);
             var ent = dataManager.NewsItems.GetNewsItemById(id);
             ent.Review = "Your suggesting is not fit to our company";
+            ent.IsRejected = true;
             context.SaveChanges();
             return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
         }

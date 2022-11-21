@@ -44,11 +44,15 @@ namespace WebApp.Areas.Admin.Controllers
                         titleImageFile.CopyTo(stream);
                     }
                 }
-                dataManager.NewsItems.SaveNewsItem(model);
+
+                try { dataManager.NewsItems.SaveNewsItem(model); }
+                catch { return View("Views/Error/Index.cshtml"); }
+
                 return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
             }
             return View(model);
         }
+
         [HttpPost]
         public IActionResult Delete(Guid id)
         {

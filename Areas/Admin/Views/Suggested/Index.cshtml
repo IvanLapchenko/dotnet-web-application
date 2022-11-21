@@ -7,7 +7,7 @@
 
         @foreach (NewsItem entity in Model)
         {
-            if (entity.IsApproved == false)
+            if (!entity.IsApproved && !entity.IsRejected)
             {
                 <li>
                     <h2>@entity.Title</h2>

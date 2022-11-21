@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QPEzJ2ZFHrrZJNAOZCbrDvVJpBV4IcOznd1Rx0YdB/faFjCp+boZsRrTGyqSQtE/5BhDpwIKrv8FwowQ48Me/A==",
+  "dgSpecHash": "/MhtzBtcZ1kZSx9R+qbFQla+ws3pmwLPnEcHvAO57mlQWf9NxswvKHj5AYVRmJKryEDXe5gM7s42VcKD2d0XgQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ivan\\source\\repos\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
@@ -165,8 +165,7 @@
     "C:\\Users\\Ivan\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Ivan\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
+    "C:\\Users\\Ivan\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

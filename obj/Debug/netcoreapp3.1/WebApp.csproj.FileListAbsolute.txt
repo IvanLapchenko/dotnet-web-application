@@ -173,7 +173,6 @@ C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\View
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\News\Index.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\News\Show.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\NewsItems\Edit.cshtml.g.cs
-C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\ServicesPartial.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\NewsItems\Index.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\TextFields\EditContacts.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Message\Index.cshtml.g.cs
@@ -181,3 +180,6 @@ C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\View
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Suggested\Index.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Suggested\Index.cshtml.g.cs
 C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Suggested\CheckReviews.cshtml.g.cs
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Error\Index.cshtml.g.cs
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\staticwebassets\WebApp.StaticWebAssets.xml
+C:\Users\Ivan\source\repos\WebApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebApp.styles.css
