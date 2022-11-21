@@ -1,6 +1,6 @@
 ﻿@model TextField
 @{
-    string strTitle = "Edit main page";
+    string strTitle = "Edit content";
     ViewBag.Title = strTitle;
 }
 
@@ -10,7 +10,9 @@
     <h2>@strTitle</h2>
     <div>
         <form asp-area="Admin" asp-controller="TextFields" asp-action="Edit" method="post" enctype="multipart/form-data">
-             <input type="hidden" asp-for="CodeWord" />
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="DateAdded" />
+            <input type="hidden" asp-for="CodeWord" />
 
             <div asp-validation-summary="All"></div>
             <div class="div-box">
@@ -20,7 +22,7 @@
             </div>
             <div class="div-box">
                 <label asp-for="Text"></label>
-                <textarea asp-for="Text"></textarea> @ViewBag.Text
+                <textarea asp-for="Text"></textarea>
                 <span asp-validation-for="Text"></span>
             </div>
             <div class="div-box">

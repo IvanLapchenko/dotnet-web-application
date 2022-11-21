@@ -58,8 +58,7 @@ namespace WebApp.Domain
                 Title = "Our Services"
             });
 
-            builder.Entity<TextField>()
-                .HasData(new TextField
+            builder.Entity<TextField>().HasData(new TextField
             {
                 Id = new Guid("210EDBB6-7BB7-4314-A13C-BE92809FE020"),
                 CodeWord = "PageContacts",

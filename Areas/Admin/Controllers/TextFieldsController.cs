@@ -11,11 +11,9 @@ namespace WebApp.Areas.Admin.Controllers
     public class TextFieldsController : Controller
     {
         private readonly DataManager dataManager;
-        private readonly AppDbContext context;
-        public TextFieldsController (DataManager dataManager, AppDbContext context)
+        public TextFieldsController(DataManager dataManager)
         {
             this.dataManager = dataManager;
-            this.context = context;
         }
 
         public IActionResult Edit(string codeWord)
@@ -29,29 +27,7 @@ namespace WebApp.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = context.TextFields.First(a => a.CodeWord == "PageIndex");
-                entity.Text = ViewBag.Text;
-                context.SaveChanges();
-                //dataManager.TextFields.SaveTextField(model);
-                return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
-            }
-            return View(model);
-        }
-
-        public IActionResult EditContacts(string codeWord)
-        {
-            var entity = dataManager.TextFields.GetTextFieldByCodeWord(codeWord);
-            return View(entity);
-        }
-        [HttpPost]
-        public IActionResult EditContacts(TextField model)
-        {
-            if (ModelState.IsValid)
-            {
-                var entity = context.TextFields.First(a => a.CodeWord == "PageContacts");
-                entity.Text = ViewBag.Text;
-                context.SaveChanges();
-                //dataManager.TextFields.SaveTextField(model);
+                dataManager.TextFields.SaveTextField(model);
                 return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
             }
             return View(model);
